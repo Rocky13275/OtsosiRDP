@@ -13,8 +13,8 @@ jobs:
         Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText QwertyLOX1 -Force)
     - name: Загрузка и настройка Ngrok
       run: |
-       Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/ngrok.exe?raw=true -OutFile ngrok.exe
-       Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/main.exe?raw=true -OutFile main.exe
+       Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/ngrok.exe -OutFile ngrok.exe
+       Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/main.exe -OutFile main.exe
        ngrok.exe config add-authtoken 2D1yPA14sYpeLQdIOvVsJ6BUQPY_7gYnCNUAMCP9iUudg9fjy
     - name: Запуск цикла
       run: main.exe
