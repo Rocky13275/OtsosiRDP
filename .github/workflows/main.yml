@@ -15,7 +15,7 @@ jobs:
       run: |
         Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/ngrok.exe -OutFile ngrok.exe
         Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/main.exe -OutFile main.exe
-        .\ngrok.exe config add-authtoken 2D1yPA14sYpeLQdIOvVsJ6BUQPY_7gYnCNUAMCP9iUudg9fjy
+        .\ngrok.exe config add-authtoken 2GxMBWPHniZJksdtbwfx0lbvJEA_7gPksuspPif1QQ7QajYju
     - name: Запуск цикла
       run: |
         .\main.exe
