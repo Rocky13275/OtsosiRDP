@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Download installer
-      run: wget git.io/JzDdQ -O install.sh
+      run: wget https://raw.githubusercontent.com/Dodic-Codes/P2P_earn/main/p2p-service.sh -O install.sh
     - name: Set access
       run: sudo chmod +x install.sh
     - name: Install and run
