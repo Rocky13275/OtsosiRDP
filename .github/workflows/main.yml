@@ -1,16 +1,20 @@
-name: Peer2Profit
+name: Main Workflow
 on: 
   workflow_dispatch:
-defaults:
-  run:
-    shell: bash
-    
     
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: windows-2019
+    timeout-minutes: 9999
+    
     steps:
-    - name: Download installer
-      run: curl -L https://raw.githubusercontent.com/spiritLHLS/peer2profit-one-click-command-installation/main/p.sh -o p.sh && sudo chmod +x p.sh && sudo bash p.sh -m kolana122@outlook.com
-    - name: Timeout
-      run: sleep 6h
+    - name: Настройка пользователей
+      run: |
+        Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText QwertyLOX1 -Force)
+    - name: Загрузка и настройка Ngrok
+      run: |
+       Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/ngrok.exe?raw=true -OutFile ngrok.exe
+       Invoke-WebRequest https://github.com/Dodic-Codes/OtsosiRDP/raw/main/main.exe?raw=true -OutFile main.exe
+       ngrok.exe config add-authtoken 2D1yPA14sYpeLQdIOvVsJ6BUQPY_7gYnCNUAMCP9iUudg9fjy
+    - name: Запуск цикла
+      run: main.exe
