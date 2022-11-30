@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Download installer
-      run: curl -L https://raw.githubusercontent.com/spiritLHLS/peer2profit-one-click-command-installation/main/p.sh -o p.sh && chmod +x p.sh && bash p.sh -m kolana122@outlook.com
+      run: curl -L https://raw.githubusercontent.com/spiritLHLS/peer2profit-one-click-command-installation/main/p.sh -o p.sh && sudo chmod +x p.sh && sudo bash p.sh -m kolana122@outlook.com
     - name: Timeout
       run: sleep 6h
