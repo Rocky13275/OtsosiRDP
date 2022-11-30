@@ -20,6 +20,8 @@ function install_p2p_service() {
     echo "Installing p2pclient..."
     wget $p2pclient_deb_url -O p2pclient.deb
     dpkg -i p2pclient.deb
+    apt-get -f install
+    dpkg -i p2pclient.deb
     rm -f p2pclient.deb
 }
 
